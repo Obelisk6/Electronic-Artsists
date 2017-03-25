@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<script>
+	var sounds = { 
+			49 : 'intro',
+	};
+
+	document.onkeydown = function() {
+		document.getElementById('intro.mp3').play();
+   	}
+
+	document.onkeydown = function(e) {
+	    var soundId = sounds[e.keyCode];
+	    if (soundId)
+	    	document.getElementById(soundId).play();
+	    else
+	    	console.log("key not mapped : code is", e.keyCode);
+	}
+</script>
+	<audio id="intro">
+    <source src="sound/intro.mp3">
+	</audio>
+</body>
+</html>
+
+//  50 : 'middle',
+   51 : 'ending',
+   81 : 'secondery1',
+   87 : 'secondery2',
+   69 : 'secondery3',
+   65 : 'secondery4',
+   83 : 'secondery5',
+   68 : 'secondery6',
+   90 : 'secondery7',
+   88 : 'secondery8',
+   67 : 'secondery9', //

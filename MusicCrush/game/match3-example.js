@@ -146,7 +146,7 @@ window.onload = function() {
                         for (var i=0; i<clusters.length; i++) {
                             // Добавя допълнителни точки за по-дълги струпваня
                             score += 100 * (clusters[i].length - 2);
-                            if (score > 2000) {
+                            if (score > 5000) {
                                 alert('YOU WIN!');
                                 window.location.href = 'Inventory.html';
                                 //newGame();
