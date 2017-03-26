@@ -64,8 +64,8 @@ window.onload = function() {
     
     // Всички бутони
     var buttons = [ { x: 30, y: 240, width: 150, height: 50, text: "New Game"},
-                    { x: 30, y: 300, width: 150, height: 50, text: "Show Moves"},
-                    { x: 30, y: 360, width: 150, height: 50, text: "Enable AI Bot"}];
+                    { x: 30, y: 300, width: 150, height: 50, text: "Noob Mode"},
+                    { x: 30, y: 360, width: 150, height: 50, text: "On AI Bot"}];
     
     // Начало на играта
     function init() {
@@ -146,7 +146,7 @@ window.onload = function() {
                         for (var i=0; i<clusters.length; i++) {
                             // Добавя допълнителни точки за по-дълги струпваня
                             score += 100 * (clusters[i].length - 2);
-                            if (score > 5000) {
+                            if (score >= 5000) {
                                 alert('YOU WIN!');
                                 window.location.href = 'Inventory.html';
                                 //newGame();
@@ -359,13 +359,13 @@ window.onload = function() {
         var imageObj = new Image();
 
         switch (r) {
-            case 250: imageObj.src = 'C:\\Users\\xxx\\Desktop\\game\\bobi_.png'; break;
-            case 200: imageObj.src = 'C:\\Users\\xxx\\Desktop\\game\\AC_.png'; break;
-            case 150: imageObj.src = 'C:\\Users\\xxx\\Desktop\\game\\ressistor.png'; break;
-            case 100: imageObj.src = 'C:\\Users\\xxx\\Desktop\\game\\cap_.png'; break;
-            case 50: imageObj.src = 'C:\\Users\\xxx\\Desktop\\game\\diode_.png'; break;
-            case 0: imageObj.src = 'C:\\Users\\xxx\\Desktop\\game\\trans_.png'; break;
-            case 75: imageObj.src = 'C:\\Users\\xxx\\Desktop\\game\\grn_.png'; break;
+            case 250: imageObj.src = 'D:\\HackTues3\\vsichkoo\\Electronic-Artsists-master\\MusicCrush\\game\\bobi_.png'; break;
+            case 200: imageObj.src = 'D:\\HackTues3\\vsichkoo\\Electronic-Artsists-master\\MusicCrush\\game\\AC_.png'; break;
+            case 150: imageObj.src = 'D:\\HackTues3\\vsichkoo\\Electronic-Artsists-master\\MusicCrush\\game\\ressistor.png'; break;
+            case 100: imageObj.src = 'D:\\HackTues3\\vsichkoo\\Electronic-Artsists-master\\MusicCrush\\game\\cap_.png'; break;
+            case 50: imageObj.src = 'D:\\HackTues3\\vsichkoo\\Electronic-Artsists-master\\MusicCrush\\game\\diode_.png'; break;
+            case 0: imageObj.src = 'D:\\HackTues3\\vsichkoo\\Electronic-Artsists-master\\MusicCrush\\game\\trans_.png'; break;
+            case 75: imageObj.src = 'D:\\HackTues3\\vsichkoo\\Electronic-Artsists-master\\MusicCrush\\game\\grn_.png'; break;
         }
       
         context.drawImage(imageObj, x + 6, y + 6);
@@ -745,7 +745,7 @@ window.onload = function() {
                 } else if (i == 2) {
 
                     aibot = !aibot;
-                    buttons[i].text = (aibot?"Disable":"Enable") + " AI Bot";
+                    buttons[i].text = (aibot?"Off":"On") + " AI Bot";
                 }
             }
         }
